@@ -13,7 +13,7 @@ The prototype is built with a Raspberry Pi Zero W, which uses an Arm6 processor 
 
  ![image](https://github.com/chuck-h/rpi-kiosk/assets/2141014/5e289b77-66a3-489c-abc2-cc734429d75a)
 
-The Raspberry Pi devices are designed to attach to a wide variety of peripherals, in our case an NFC reader and display. Big shout-out to Adafruit for peripheral harware and software support. https://www.adafruit.com/
+This code should be compatible with other more recent and somewhat larger Raspberry Pi boards (e.g. RPi 3B+) which have more powerful processors -- which may be useful for speedy blockhain crypto operations. The Raspberry Pi devices are designed to attach to a wide variety of peripherals, in our case an NFC reader and display. Big shout-out to Adafruit for peripheral harware and software support. https://www.adafruit.com/
 
 ### NFC reader
 PN532-based NFC reader peripheral, connected through serial port. https://www.adafruit.com/product/364
