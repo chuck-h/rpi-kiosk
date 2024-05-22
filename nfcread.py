@@ -29,7 +29,7 @@ async def main():
     while True:
         await asyncio.sleep(0) # yield the thread
         uid = pn532.read_passive_target(timeout=0.5)
-        print('.', end="", flush=True)
+        #print('.', end="", flush=True)
         if uid is None:
             continue
         print('Found card with UID:', [hex(i) for i in uid])

@@ -1,0 +1,30 @@
+[ERROR:flutter/runtime/dart_vm_initializer.cc(41)] Unhandled Exception: MissingPluginException(No implementation found for method setWindowTitle on channel flutter/windowsize)
+#0      MethodChannel._invokeMethod (package:flutter/src/services/platform_channel.dart:332)
+<asynchronous suspension>
+#1      MethodChannel.invokeMapMethod (package:flutter/src/services/platform_channel.dart:534)
+<asynchronous suspension>
+#2      WindowSizeChannel.setWindowTitle (package:window_size/src/window_size_channel.dart:191)
+<asynchronous suspension>
+
+[ERROR:flutter/runtime/dart_vm_initializer.cc(41)] Unhandled Exception: MissingPluginException(No implementation found for method setWindowMinimumSize on channel flutter/windowsize)
+#0      MethodChannel._invokeMethod (package:flutter/src/services/platform_channel.dart:332)
+<asynchronous suspension>
+#1      WindowSizeChannel.setWindowMinSize (package:window_size/src/window_size_channel.dart:167)
+<asynchronous suspension>
+
+[ERROR:flutter/runtime/dart_vm_initializer.cc(41)] Unhandled Exception: MissingPluginException(No implementation found for method setWindowMaximumSize on channel flutter/windowsize)
+#0      MethodChannel._invokeMethod (package:flutter/src/services/platform_channel.dart:332)
+<asynchronous suspension>
+#1      WindowSizeChannel.setWindowMaxSize (package:window_size/src/window_size_channel.dart:183)
+<asynchronous suspension>
+
+[ERROR:flutter/runtime/dart_vm_initializer.cc(41)] Unhandled Exception: MissingPluginException(No implementation found for method getWindowInfo on channel flutter/windowsize)
+#0      MethodChannel._invokeMethod (package:flutter/src/services/platform_channel.dart:332)
+<asynchronous suspension>
+#1      WindowSizeChannel.getWindowInfo (package:window_size/src/window_size_channel.dart:144)
+<asynchronous suspension>
+#2      getCurrentScreen (package:window_size/src/window_size_utils.dart:34)
+<asynchronous suspension>
+#3      setupWindow.<anonymous closure> (package:pos/main.dart:35)
+<asynchronous suspension>
+
