@@ -9,14 +9,14 @@ An early brainstorming document is here: https://docs.google.com/document/d/1bi9
 
 ## Hardware configuration
 
-The prototype is built with a Raspberry Pi Zero W, which uses an Arm6 processor and runs a variant of Debian Linux. https://www.raspberrypi.com/products/raspberry-pi-zero-w/ This board includes Wifi for internet connectivity.
+The prototype is built with a Raspberry Pi ~~Zero W, which uses an Arm6 processor~~ Zero 2 W which uses an Arm7 processor and runs a variant of Debian Linux. (https://www.adafruit.com/product/5291) This board includes Wifi for internet connectivity. (Note: minimum Arm7 proc. is required to run flutter https://github.com/chuck-h/rpi-pos)
 
  ![image](https://github.com/chuck-h/rpi-kiosk/assets/2141014/5e289b77-66a3-489c-abc2-cc734429d75a)
 
 The Raspberry Pi devices are designed to attach to a wide variety of peripherals, in our case an NFC reader and display. Big shout-out to Adafruit for peripheral harware and software support. https://www.adafruit.com/
 
 ### NFC reader
-PN532-based NFC reader peripheral, connected through serial port. https://www.adafruit.com/product/364
+PN532-based NFC reader peripheral, connected through serial port. https://www.amazon.com/HiLetgo-Communication-Arduino-Raspberry-Android/dp/B01I1J17LC/ ( or https://www.adafruit.com/product/364 )
 
 ### 1.3-inch display
 1.3-inch 240x240 color TFT display, connected through SPI. https://www.adafruit.com/product/4484
