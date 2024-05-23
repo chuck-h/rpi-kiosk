@@ -22,7 +22,10 @@ PN532-based NFC reader peripheral, connected through serial port. https://www.am
 1.3-inch 240x240 color TFT display, connected through SPI. https://www.adafruit.com/product/4484
 
 ### Alternative displays
-The processor board includes an HDMI port which can connect with larger display screens, and can also support touchscreen input. These features are not being used in the prototype.
+The processor board includes an HDMI port which can connect with larger display screens, and can also support touchscreen input. These features are not being used in the initial prototype, but a "Point of Sale" (POS) extension uses them.
+
+### Point of Sale extension
+A 5" touch screen https://www.amazon.com/dp/B0CP3DH3LN can be connected. See https://github.com/chuck-h/rpi-pos for a POS mockup app in flutter.
 
 ## Software architecture
 This project uses loosely-coupled coprocessing where independent programs communicate through the nats.io publish/subscribe messaging framework. Separate processes handle NFC reading, display, and blockchain communication.
@@ -66,13 +69,31 @@ Adafruit TFT display https://learn.adafruit.com/adafruit-mini-pitft-135x240-colo
 ### Antelope blockchain support
 Greymass wharfkit `npm install @wharfkit/session @wharfkit/wallet-plugin-privatekey @wharfkit/contract dotenv`
 
+### Flutter support (POS extension)
+Ref https://github.com/ardera/flutter-pi
+```
+git clone --recursive https://github.com/ardera/flutter-pi.git
+cd flutter-pi/
+mkdir build && cd build
+cmake ..
+make -j`nproc`
+sudo make install
+sudo apt-get install xdg-user-dirs
+``` 
+
 ### Running the application
 At this time it is necessary to start each application manually
 ```
 python3 nfcread.py &
 python3 nfcshow.py &
-node antelope.js
+node antelope.js &
 ```
+If a flutter POS app (e.g. https://github.com/chuck-h/rpi-pos) is installed in the `pos` subdirectory,
+```
+cd pos
+flutter-pi -r 90 --release ./flutter_assets/ &
+```
+
 
 
 
